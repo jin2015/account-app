@@ -1,5 +1,6 @@
 import React from 'react';
 import AccountRow from './AccountRow'
+import Table from 'react-bootstrap/Table'
 
 function AccountTable() {
     const serverAccounts =[ 
@@ -64,7 +65,7 @@ function AccountTable() {
         ];
 
   return (
-    <table>
+    <Table striped bordered hover> 
         <thead>
           <tr>
               <th>
@@ -80,11 +81,11 @@ function AccountTable() {
                 serverAccounts.map((value,index) => {
 
                      return  <AccountRow key={index} value={value}></AccountRow>
-                })};
+                })
             }
            
         </tbody>
-    </table>
+    </Table>
   );
 }
 
